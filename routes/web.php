@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/list', function () {
+    $users = \App\User::all();
+    return json_encode($users);
 });
