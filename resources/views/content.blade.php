@@ -1,38 +1,40 @@
 
 @extends('layouts.app')
 @section('content')
+
+<div class="main-panel">
+	<nav class="navbar navbar-default navbar-fixed">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Kelola User</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="content">
+		
 <div class="container-fluid">
 	<div class="row">
 
 		<div class="col-md-12">
 			<div class="card card-plain">
-				<div class="header" style="padding-top: 1px; padding-right: 25px">
-					<a href="user.add.php" class="pull-right btn btn-fill btn-success btn-sm">Add New User</a>
-				</div>
 				<div class="content table-responsive table-full-width">
 					<table class="table table-hover">
 						<thead>
 							<th>ID</th>
-							<th>Username</th>
-							<th>First Name</th>
-							<th>Last Name</th>
+							<th>Nama</th>
 							<th>Email</th>
-							<th width="200px">Action</th>
 						</thead>
 						
 				
 						<tbody>
+							@foreach($users as $key)
 							<tr>
-								<td>ID</td>
-								<td>Username</td>
-								<td>First Name</td>
-								<td>Last name</td>
-								<td>Email</td>
-								<td>
-									<a href="user.detail.php?id=" class="btn btn-fill btn-info btn-sm">Detail</a>
-									<a href="user.proses.delete.php?id=" onclick="return confirm('Are you sure to delete this data?')" class="btn btn-fill btn-danger btn-sm">Delete</a>
-								</td>
+								<td>{{ $key->id }}</td>
+								<td>{{ $key->nama }}</td>
+								<td>{{ $key->email }}</td>
 							</tr>
+							@endforeach
 						</tbody>
 					</table>
 

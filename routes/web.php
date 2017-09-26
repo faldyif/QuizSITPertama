@@ -12,5 +12,5 @@
 */
 
 
-Route::get('/', 'tampil@index');
+Route::get('/list', 'UserController@index');
 

@@ -54,14 +54,3 @@
 			</div>
 			
 		</div>
-
-		<div class="main-panel">
-			<nav class="navbar navbar-default navbar-fixed">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<a class="navbar-brand" href="#">Kelola User</a>
-					</div>
-				</div>
-			</nav>
-
-			<div class="content">
