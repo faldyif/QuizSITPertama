@@ -38,15 +38,15 @@
 
 				<ul class="nav">
 					<li>
-						<a href="./">
+						<a href="{{ url('/') }}">
 							<i class="pe-7s-id"></i>
-							<p>Kelola User</p>
+							<p>List API</p>
 						</a>
 					</li>
 					<li>
-						<a href="./">
+						<a href="{{ url('list') }}">
 							<i class="pe-7s-id"></i>
-							<p>List API</p>
+							<p>Kelola User</p>
 						</a>
 					</li>
 				</ul>
@@ -54,16 +54,6 @@
 			
 		</div>
 
-		<div class="main-panel">
-			<nav class="navbar navbar-default navbar-fixed">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<a class="navbar-brand" href="#">Kelola User</a>
-					</div>
-				</div>
-			</nav>
-
-			<div class="content">
             @yield('content')
 
 

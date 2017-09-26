@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<title>REST Sample</title>
@@ -12,18 +11,18 @@
 	<meta name="viewport" content="width=device-width" />
 
 	<!-- Bootstrap core CSS     -->
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="{{ url('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
 
 	<!-- Animation library for notifications   -->
-	<link href="assets/css/animate.min.css" rel="stylesheet"/>
+	<link href="{{ url('assets/css/animate.min.css') }}" rel="stylesheet"/>
 
 	<!--  Light Bootstrap Table core CSS    -->
-	<link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+	<link href="{{ url('assets/css/light-bootstrap-dashboard.css') }}" rel="stylesheet"/>
 
 	<!--     Fonts and icons     -->
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-	<link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+	<link href="{{ url('assets/css/pe-icon-7-stroke.css') }}" rel="stylesheet" />
 </head>
 <body>
 
@@ -32,20 +31,18 @@
 
 			<div class="sidebar-wrapper">
 				<div class="logo" style="background-color: rgba(255,255,255,0.08)">
-					<a href="./" class="simple-text">
 						<strong>REST</strong>Sample
-					</a>
 				</div>
 
 				<ul class="nav">
 					<li>
-						<a href="./">
+						<a href="{{ url('/') }}">
 							<i class="pe-7s-id"></i>
 							<p>Kelola User</p>
 						</a>
 					</li>
 					<li>
-						<a href="./">
+						<a href="{{ url('list') }}">
 							<i class="pe-7s-id"></i>
 							<p>List API</p>
 						</a>
