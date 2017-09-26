@@ -17,8 +17,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 Route::get('/list', function () {
+    $result = array();
     $users = \App\User::all();
-    return json_encode($users);
+
+    $result['status'] = true;
+    $result['users'] = $users;
+    return json_encode($result);
 });
 Route::get('/add', function (\Illuminate\Http\Request $request) {
     $validator = Validator::make($request->all(), [
